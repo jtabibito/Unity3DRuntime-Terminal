@@ -60,9 +60,3 @@ Edit config file to change fonts and colors
 ## License
 
 [MIT License](LICENSE)
-
-## Contacts
-
-Telegram: [@omid3098](https://t.me/omid3098)  
-Twitter: [@omid3098](https://twitter.com/omid3098)  
-E-Mail: [info@omid-saadat.com](mailto:info@omid-saadat.com)
