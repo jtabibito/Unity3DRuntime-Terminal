@@ -35,7 +35,7 @@ namespace Terminal {
 
         internal void OnGUI()
         {
-            scrollPosition = GUILayout.BeginScrollView(scrollPosition, false, false, GUILayout.Width(Screen.width*0.7f), GUILayout.Height(Screen.height*0.5f));
+            scrollPosition = GUILayout.BeginScrollView(scrollPosition, false, false, GUILayout.Width(Screen.width), GUILayout.Height(Screen.height*0.5f));
             GUILayout.Label(terminal.History + terminal.ConsoleLine + terminal.InputText, terminalStyle);
             if (terminal.AutoCompList.Count > 0)
             {
