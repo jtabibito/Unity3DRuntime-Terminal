@@ -9,6 +9,8 @@ namespace Terminal {
 
         public GUIStyle terminalStyle { get; private set; }
 
+        private Vector2 scrollPosition;
+
         public TerminalGUI(Terminal terminal)
         {
             this.terminal = terminal;
@@ -33,6 +35,7 @@ namespace Terminal {
 
         internal void OnGUI()
         {
+            scrollPosition = GUILayout.BeginScrollView(scrollPosition, false, false, GUILayout.Width(Screen.width*0.7f), GUILayout.Height(Screen.height*0.5f));
             GUILayout.Label(terminal.History + terminal.ConsoleLine + terminal.InputText, terminalStyle);
             if (terminal.AutoCompList.Count > 0)
             {
@@ -53,6 +56,7 @@ namespace Terminal {
             }
             else
                 GUI.color = config.commandColor;
+            GUILayout.EndScrollView();
         }
 
     }
